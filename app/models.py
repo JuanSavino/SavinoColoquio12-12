@@ -13,11 +13,13 @@ class Alumno(models.Model):
 
 
 class Asistencia(models.Model):
+    nombre_alumno= models.CharField(max_length=50)
     datetime = models.DateTimeField('Fecha',auto_now=True)
 
 
 
 class Curso(models.Model):
     name = models.CharField(max_length=50)
+    alumno = models.ForeignKey(Alumno, on_delete=models.CASCADE)
 
 
