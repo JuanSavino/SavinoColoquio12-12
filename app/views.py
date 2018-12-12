@@ -7,7 +7,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def dame_nombres(request):
+def dame_alumnos(request):
     context = {}
     context['Alumnos'] = Alumno.objects.all()
     return render(request, 'index.html', context)
